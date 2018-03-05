@@ -1,11 +1,11 @@
-# react-moment-countdown
-An unopinionated countdown component for React using moment.js.
+# react-native-moment-countdown
+An unopinionated countdown component for React Native using moment.js.
 
 
 ## Installation
 
 ```js
-$ npm install react-moment-countdown --save
+$ npm install react-native-moment-countdown --save
 ```
 
 ## How to use
@@ -14,13 +14,13 @@ $ npm install react-moment-countdown --save
 
    ```js
       import React from 'react';
-      import ReactMomentCountDown from 'react-moment-countdown';
+      import RNMomentCountDown from 'react-moment-countdown';
 
       export default function CountDownComponent () {
         const dateInFuture = new Date('2017-12-31');
 
         return (
-          <ReactMomentCountDown toDate={dateInFuture} />
+          <RNMomentCountDown toDate={dateInFuture} />
         );
       };
    ```
@@ -29,14 +29,14 @@ $ npm install react-moment-countdown --save
 
    ```js
    import React from 'react';
-   import ReactMomentCountDown from 'react-moment-countdown';
+   import RNNMomentCountDown from 'react-moment-countdown';
    import moment from 'moment';
 
    export default function CountDownComponent () {
      const dateInFuture = moment('2017-12-31', 'YYYY-MM-DD');
 
      return (
-       <ReactMomentCountDown toDate={dateInFuture} />
+       <RNMomentCountDown toDate={dateInFuture} />
      );
    };
    ```
@@ -47,10 +47,10 @@ The default value of `sourceFormatMask` props is `YYYY-MM-DD`.
 
    ```js
    import {render} from 'react-dom'
-   import ReactMomentCountDown from 'react-moment-countdown'
+   import RNMomentCountDown from 'react-moment-countdown'
 
    render(
-     <ReactMomentCountDown toDate='2017-12-31 23:59:59' sourceFormatMask='YYYY-MM-DD HH:mm:ss' />,
+     <RNMomentCountDown toDate='2017-12-31 23:59:59' sourceFormatMask='YYYY-MM-DD HH:mm:ss' />,
      document.getElementById('sample-date')
    )
    ```   
