@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/thiagozanetti/react-moment-countdown.git"
+    "url": "git+https://github.com/adeb6600/react-native-moment-countdown.git"
   },
   "keywords": [
     "react",
@@ -19,12 +19,12 @@
     "javascript",
     "es6"
   ],
-  "author": "Thiago Zanetti <thiago.project@gmail.com>",
+  "author": "Ini Adebanjo <adeb6600@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thiagozanetti/react-moment-countdown/issues"
+    "url": "https://github.com/adeb6600/react-native-moment-countdown/issues"
   },
-  "homepage": "https://github.com/thiagozanetti/react-moment-countdown#readme",
+  "homepage": "https://github.com/adeb6600/react-native-moment-countdown#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
