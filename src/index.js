@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import { oneOfType, func, instanceOf, string } from 'prop-types'
 import { momentObj } from 'react-moment-proptypes'
-
+import {
+  Text
+} from 'react-native'
 import formatDate from './format-date'
 
+import TimerEnhance from 'react-native-smart-timer-enhance'
 class ReactMomentCountDown extends Component {
   constructor(props) {
     super(props)
@@ -16,11 +19,11 @@ class ReactMomentCountDown extends Component {
   componentDidMount() {
     this.tick()
 
-    this.timer = window.setInterval(this.tick.bind(this), 1000)
+    this.timer = this.setInterval(this.tick.bind(this), 1000)
   }
 
   componentWillUnmount() {
-    window.clearInterval(this.timer)
+    this.clearInterval(this.timer)
   }
 
   tick() {
@@ -28,7 +31,7 @@ class ReactMomentCountDown extends Component {
     const [delta, countdown] = formatDate(toDate, targetFormatMask, sourceFormatMask)
 
     if (delta <= 0) {
-      window.clearInterval(this.timer)
+      this.clearInterval(this.timer)
 
       if (onCountdownEnd) {
         onCountdownEnd()
@@ -45,7 +48,7 @@ class ReactMomentCountDown extends Component {
   }
   render() {
     return (
-      <span>{this.state.countdown}</span>
+      <Text>{this.state.countdown}</Text>
     )
   }
 };
@@ -69,4 +72,4 @@ ReactMomentCountDown.defaultProps = {
   onCountdownEnd: null
 }
 
-export default ReactMomentCountDown
+export default TimerEnhance(ReactMomentCountDown)

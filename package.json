@@ -36,5 +36,8 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-moment-proptypes": "^1.5.0"
+  },
+  "dependencies": {
+    "react-native-smart-timer-enhance": "^1.0.3"
   }
 }
