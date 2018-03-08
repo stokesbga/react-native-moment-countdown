@@ -96,7 +96,7 @@ var ReactMomentCountDown = function (_Component) {
     value: function render() {
       return _react2.default.createElement(
         _reactNative.Text,
-        null,
+        { style: this.props.timeStyle },
         this.state.countdown
       );
     }

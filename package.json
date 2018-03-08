@@ -38,6 +38,7 @@
     "react-moment-proptypes": "^1.5.0"
   },
   "dependencies": {
+    "react-moment-proptypes": "^1.5.0",
     "react-native-smart-timer-enhance": "^1.0.3"
   }
 }
