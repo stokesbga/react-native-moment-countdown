@@ -97,7 +97,7 @@ var ReactMomentCountDown = function (_Component) {
       return _react2.default.createElement(
         _reactNative.Text,
         { style: this.props.timeStyle },
-        this.state.countdown
+        this.state.countdown == "Invalid date" ? this.props.expiredLabel : this.state.countdown
       );
     }
   }]);
@@ -109,6 +109,7 @@ var ReactMomentCountDown = function (_Component) {
 
 ReactMomentCountDown.propTypes = {
   toDate: (0, _propTypes.oneOfType)([_reactMomentProptypes.momentObj, (0, _propTypes.instanceOf)(Date), _propTypes.string]).isRequired,
+  expiredLabel: _propTypes.string,
   sourceFormatMask: _propTypes.string,
   targetFormatMask: _propTypes.string,
   onTick: _propTypes.func,
@@ -118,6 +119,7 @@ ReactMomentCountDown.propTypes = {
 ReactMomentCountDown.defaultProps = {
   sourceFormatMask: 'YYYY-MM-DD',
   targetFormatMask: 'HH:mm:ss',
+  expiredLabel: "Expired",
   onTick: null,
   onCountdownEnd: null
 };

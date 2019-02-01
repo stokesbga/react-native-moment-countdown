@@ -48,7 +48,10 @@ class ReactMomentCountDown extends Component {
   }
   render() {
     return (
-      <Text style={this.props.timeStyle}>{this.state.countdown}</Text>
+      <Text style={this.props.timeStyle}>
+        {this.state.countdown == "Invalid date" ? 
+          this.props.expiredLabel : this.state.countdown}
+      </Text>
     )
   }
 };
@@ -59,6 +62,7 @@ ReactMomentCountDown.propTypes = {
     instanceOf(Date),
     string
   ]).isRequired,
+  expiredLabel: string,
   sourceFormatMask: string,
   targetFormatMask: string,
   onTick: func,
@@ -68,6 +72,7 @@ ReactMomentCountDown.propTypes = {
 ReactMomentCountDown.defaultProps = {
   sourceFormatMask: 'YYYY-MM-DD',
   targetFormatMask: 'HH:mm:ss',
+  expiredLabel: "Expired",
   onTick: null,
   onCountdownEnd: null
 }

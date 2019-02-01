@@ -1,6 +1,6 @@
 {
-  "name": "react-native-moment-countdown",
-  "version": "0.0.2",
+  "name": "@outfix/react-native-moment-countdown",
+  "version": "0.1.0",
   "description": "An unopinionated countdown timer component for React Native.",
   "main": "dist/index.js",
   "scripts": {
